@@ -37,15 +37,19 @@ const App = () => {
     setSelectedIngredients(updatedSelectedIngredients);
   };
   return (
-    <main className="main-container">
+    <>
       <h1>Burger Stacker</h1>
-      <section className="section">
-        <BurgerStack ingredients={availableIngredients} addIngredient={addIngredient}/>
-      </section>
-      <section className="section">
-        <IngredientList selectedIngredients={selectedIngredients} removeIngredient={removeIngredient}/>
-      </section>
-    </main>
+      <div className="app-container">
+        <div className="column">
+          <h2>Available Ingredients</h2>
+          <BurgerStack ingredients={availableIngredients} addIngredient={addIngredient} />
+        </div>
+        <div className="column">
+          <h2>Selected Ingredients</h2>
+          <IngredientList selectedIngredients={selectedIngredients} removeIngredient={removeIngredient} />
+        </div>
+      </div>
+    </>
   );
 };
 

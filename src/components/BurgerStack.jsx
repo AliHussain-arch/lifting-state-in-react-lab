@@ -1,16 +1,16 @@
 // `src/components/BurgerStack.jsx`
 const BurgerStack = ({ ingredients, addIngredient }) => {
   return (
-    <>
+    <div>
       <ul>
         {ingredients.map((ingredient) => (
           <li key={ingredient.name} style={{ backgroundColor: ingredient.color }}>
             {ingredient.name}
-            <button onClick={() => addIngredient(ingredient)}>+</button>
+            <button className="btn" onClick={() => addIngredient(ingredient)}>+</button>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

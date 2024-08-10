@@ -1,4 +1,3 @@
-/* src/App.css */
 * {
   box-sizing: border-box;
 }
@@ -7,11 +6,9 @@
   line-height: 1;
   font-weight: 400;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,8 +19,11 @@ html,
 body,
 #root {
   margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: #000000;
 }
 
 main {
@@ -35,48 +35,59 @@ main {
   align-items: center;
 }
 
-section {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 h1 {
   text-align: center;
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column h2 {
+  text-align: center;
+  color: #fff;
 }
 
 ul {
   width: 100%;
-  height: 100%;
-
   margin: 0;
-  padding: 16px;
+  padding: 0;
   list-style: none;
-
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 li {
-  padding: 8px;
+  padding: 12px;
   margin-bottom: 4px;
   border-radius: 8px;
+  background-color: #000000;
+  color: white;
   font-weight: bold;
   text-shadow: 0px 0px 2px #000000;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-button {
+.btn {
   cursor: pointer;
   border-radius: 8px;
   background-color: #000000;
   border: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255); 
   padding: 10px 15px;
   font-size: 16px;
   display: inline-flex;
