@@ -5,7 +5,7 @@ const IngredientList = ({ selectedIngredients, removeIngredient }) => {
         {selectedIngredients.map((ingredient) => (
           <li key={ingredient.key} style={{ backgroundColor: ingredient.color }}>
             {ingredient.name}
-            <button className="btn" onClick={() => removeIngredient(ingredient)}>-</button>
+            <button className="btn" onClick={() => removeIngredient(ingredient)}>X</button>
           </li>
         ))}
       </ul>
